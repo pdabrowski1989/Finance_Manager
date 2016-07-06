@@ -2,7 +2,7 @@
 1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'install',
-1 verbose cli   'requirejs',
+1 verbose cli   'require',
 1 verbose cli   '--save-dev' ]
 2 info using npm@2.15.5
 3 info using node@v4.4.5
@@ -18,7 +18,7 @@
 5 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)
 6 verbose cwd D:\share_bills
 7 error Windows_NT 6.1.7601
-8 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "requirejs" "--save-dev"
+8 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "require" "--save-dev"
 9 error node v4.4.5
 10 error npm  v2.15.5
 11 error file D:\share_bills\package.json

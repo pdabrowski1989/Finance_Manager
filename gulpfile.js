@@ -8,5 +8,6 @@ gulp.task("es6", function () {
         .pipe(sourcemaps.init())
         .pipe(babel())
         .pipe(concat("index.js"))
+        .pipe(sourcemaps.write("."))
         .pipe(gulp.dest("www/js/"));
 });

@@ -3,7 +3,7 @@
 var _MainCtrl = require('/components/MainCtrl');
 
 angular.module('ShareBillsApp', []).controller('MainCtrl', _MainCtrl.MainCtrl);
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -13,6 +13,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var MainCtrl = function MainCtrl() {
     _classCallCheck(this, MainCtrl);
+
+    console.log('aaa');
 };
 
 exports.MainCtrl = MainCtrl;
+//# sourceMappingURL=index.js.map
