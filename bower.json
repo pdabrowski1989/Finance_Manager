@@ -1,0 +1,22 @@
+{
+  "name": "share_bills_app",
+  "description": "App to help split bills between roomates",
+  "main": "y",
+  "authors": [
+    "Pawel Dabrowski"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.7",
+    "jquery": "^3.0.0",
+    "less": "^2.7.1"
+  }
+}
