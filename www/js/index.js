@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ShareBillsApp', ['ui-router']);
+angular.module('ShareBillApp', ['ui.router']);
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12,7 +12,15 @@ var MainCtrl = function MainCtrl() {
     console.log('aaa');
 };
 
-angular.module('ShareBillsApp').controller('MainCtrl', MainCtrl);
+angular.module('ShareBillApp').controller('MainCtrl', MainCtrl);
+/**
+ * Created by PawelD on 2016-07-06.
+ */
+"use strict";
+/**
+ * Created by PawelD on 2016-07-06.
+ */
+"use strict";
 /**
  * Created by PawelD on 2016-07-06.
  */
@@ -44,15 +52,9 @@ var LogInService = function LogInService($http) {
 };
 
 angular.module('ShareBillApp').service('LogInService', LogInService);
-"use strict";
+'use strict';
 
-angular.module();
-/**
- * Created by PawelD on 2016-07-06.
- */
-"use strict";
-/**
- * Created by PawelD on 2016-07-06.
- */
-"use strict";
+function LoginConfig() {}
+
+angular.module('ShareBillApp').config(LoginConfig);
 //# sourceMappingURL=index.js.map

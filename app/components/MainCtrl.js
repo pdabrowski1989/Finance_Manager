@@ -8,5 +8,5 @@ class MainCtrl {
 }
 
 angular
-    .module('ShareBillsApp')
+    .module('ShareBillApp')
     .controller('MainCtrl', MainCtrl);
