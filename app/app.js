@@ -1,5 +1,5 @@
-import { MainCtrl } from '/components/MainCtrl';
+'use strict';
 
-angular
-    .module('ShareBillsApp', [])
-    .controller('MainCtrl', MainCtrl);
+angular.module('ShareBillsApp', [
+    'ui-router'
+]);

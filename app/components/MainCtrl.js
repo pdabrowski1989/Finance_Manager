@@ -1,7 +1,12 @@
+'use strict';
+
 class MainCtrl {
     constructor() {
+        let mCtrl = this;
         console.log('aaa')
     }
 }
 
-export { MainCtrl };
+angular
+    .module('ShareBillsApp')
+    .controller('MainCtrl', MainCtrl);

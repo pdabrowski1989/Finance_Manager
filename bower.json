@@ -16,8 +16,9 @@
   ],
   "devDependencies": {
     "angular": "^1.5.7",
-    "jquery": "^3.0.0",
+    "jquery": "^2.2.4",
     "less": "^2.7.1",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "ui-router#^0.3.1"
   }
 }
