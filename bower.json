@@ -17,6 +17,7 @@
   "devDependencies": {
     "angular": "^1.5.7",
     "jquery": "^3.0.0",
-    "less": "^2.7.1"
+    "less": "^2.7.1",
+    "bootstrap": "^3.3.6"
   }
 }
