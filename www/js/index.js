@@ -39,10 +39,6 @@ function AddBillConfig($stateProvider, $urlRouterProvider) {
 }
 
 angular.module('HouseShareFinances').config(AddBillConfig);
-/**
- * Created by PawelD on 2016-07-06.
- */
-"use strict";
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69,6 +65,10 @@ function DashboardConfig($stateProvider, $urlRouterProvider) {
 }
 
 angular.module('HouseShareFinances').config(DashboardConfig);
+/**
+ * Created by PawelD on 2016-07-06.
+ */
+"use strict";
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -111,3 +111,26 @@ function LoginConfig($stateProvider) {
 angular.module('HouseShareFinances').config(LoginConfig);
 "use strict";
 "use strict";
+'use strict';
+
+function toolbar() {
+    return {
+        restrict: 'E',
+        controller: 'ToolbarCtrl',
+        controllerAs: 'tCtrl',
+        templateUrl: '../app/components/Toolbar/toolbar.html'
+    };
+}
+
+angular.module('HouseShareFinances').directive('toolbar', toolbar);
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ToolbarCtrl = function ToolbarCtrl() {
+    _classCallCheck(this, ToolbarCtrl);
+
+    var tCtrl = this;
+};
+
+angular.module('HouseShareFinances').controller('ToolbarCtrl', ToolbarCtrl);
