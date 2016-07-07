@@ -1,13 +1,19 @@
-<div>
+<div class="container">
     <form class="form-horizontal">
-        <label>
-            User:
-            <input ng-model="lCtrl.user.name" class="form-control">
-        </label>
-        <label>
-            Password:
-            <input ng-model="lCtrl.user.password" class="form-control">
-        </label>
-        <button class="btn btn-primary">Submit</button>
+        <div class="form-group">
+            <label>
+                User:
+                <input ng-model="lCtrl.user.name" ng-change="lCtrl.sayUser()" class="form-control">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                Password:
+                <input ng-model="lCtrl.user.password" class="form-control">
+            </label>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Submit</button>
+        </div>
     </form>
 </div>
