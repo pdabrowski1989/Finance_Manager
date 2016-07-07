@@ -13,12 +13,35 @@ var MainCtrl = function MainCtrl() {
 };
 
 angular.module('HouseShareFinances').controller('MainCtrl', MainCtrl);
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var AddBillCtrl = function AddBillCtrl() {
+    _classCallCheck(this, AddBillCtrl);
+
+    var abCtrl = this;
+};
+
+angular.module('HouseShareFinances').controller('AddBillCtrl', AddBillCtrl);
+"use strict";
+'use strict';
+
+function AddBillConfig($stateProvider, $urlRouterProvider) {
+    $stateProvider.state('addbill', {
+        url: "/addbill",
+        templateUrl: '../app/components/AddBill/addbill.html',
+        controller: 'AddBillCtrl',
+        controllerAs: 'abCtrl'
+    });
+
+    $urlRouterProvider.otherwise('/dashboard');
+}
+
+angular.module('HouseShareFinances').config(AddBillConfig);
 /**
  * Created by PawelD on 2016-07-06.
  */
-"use strict";
-"use strict";
-"use strict";
 "use strict";
 'use strict';
 
@@ -57,7 +80,6 @@ var LogInCtrl = function LogInCtrl() {
 
     var lCtrl = this;
     lCtrl.user = {};
-
     lCtrl.sayUser = function () {
         console.log(_this.user.name);
     };
