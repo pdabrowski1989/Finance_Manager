@@ -2,17 +2,17 @@
 <html lang="en" ng-app="HouseShareFinances" ng-controller="MainCtrl">
 <head>
     <meta charset="UTF-8">
-    <title>HouseShareFinances</title>
+    <title>Domowy Kalkulator Rachunków</title>
     <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/fonts.css">
     <link rel="stylesheet" type="text/less" href="style/index.less">
 </head>
 <body>
 
-<div class="container-fluid">
-    <div class="flex row">
-        <toolbar></toolbar>
-        <div class="view" ui-view></div>
-    </div>
+<navbar></navbar>
+<div class="flex row-direction">
+    <toolbar></toolbar>
+    <div class="view" ui-view></div>
 </div>
 
 <!----  Libs  ---->

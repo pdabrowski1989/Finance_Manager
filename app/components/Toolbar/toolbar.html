@@ -1,16 +1,8 @@
-<div class="toolbar flex">
+<div class="toolbar flex column-direction">
+   <div>
+       <label>Miesiąc:</label>
+   </div>
     <div class="stretch">
-        toolbar<br>
-        toolbar<br>
-        toolbar<br>
-        toolbar<br>
-        toolbar<br>
-        toolbar<br>
-        toolbar<br>
-        toolbar<br>
-        toolbar<br>
-        toolbar<br>
-        toolbar<br>
-        toolbar<br>
+      <button ng-class="{'active-month': month === tCtrl.currentMonth}" ng-repeat="month in tCtrl.months" class="btn-month">{{month}}</button>
     </div>
 </div>

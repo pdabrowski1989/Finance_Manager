@@ -1,7 +1,38 @@
 toolbar {
-  background: #000;
+  background: #fff;
   color: #fff;
   align-self: stretch;
   min-height: 100%;
-  height: 100vh;
+  border-right: solid 1px #eee;
+  max-width: 250px;
+  height: ~"calc(100vh - 81px)";
+
+  label {
+    color: #696969;
+    margin: 40px 15px 10px;
+  }
+
+  .btn-month {
+    width: 100%;
+    padding: 7px 15px;
+    border: none;
+    background: #fff;
+    color: #696969;
+    text-align: left;
+    font-size: 15px;
+
+    &:first-child {
+      border-top: solid 1px #eee;
+    }
+
+    & + .btn-month {
+      border-top: solid 1px #eee;
+    }
+
+    &.active-month {
+      background: #01579b;
+      color: #fff;
+    }
+  }
 }
+

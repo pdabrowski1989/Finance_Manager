@@ -27,18 +27,43 @@ angular.module('HouseShareFinances').controller('AddBillCtrl', AddBillCtrl);
 "use strict";
 'use strict';
 
-function AddBillConfig($stateProvider, $urlRouterProvider) {
+function AddBillConfig($stateProvider) {
     $stateProvider.state('addbill', {
         url: "/addbill",
         templateUrl: '../app/components/AddBill/addbill.html',
         controller: 'AddBillCtrl',
         controllerAs: 'abCtrl'
     });
-
-    $urlRouterProvider.otherwise('/dashboard');
 }
 
 angular.module('HouseShareFinances').config(AddBillConfig);
+/**
+ * Created by PawelD on 2016-07-06.
+ */
+"use strict";
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CreateHouseCtrl = function CreateHouseCtrl() {
+    _classCallCheck(this, CreateHouseCtrl);
+
+    var chCtrl = this;
+};
+
+angular.module('HouseShareFinances').controller('CreateHouseCtrl', CreateHouseCtrl);
+'use strict';
+
+function CreateHouseConfig($stateProvider) {
+    $stateProvider.state('createhouse', {
+        url: "/createhouse",
+        templateUrl: '../app/components/CreateHouse/createhouse.html',
+        controller: 'CreateHouseCtrl',
+        controllerAs: 'chCtrl'
+    });
+}
+
+angular.module('HouseShareFinances').config(CreateHouseConfig);
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -65,10 +90,6 @@ function DashboardConfig($stateProvider, $urlRouterProvider) {
 }
 
 angular.module('HouseShareFinances').config(DashboardConfig);
-/**
- * Created by PawelD on 2016-07-06.
- */
-"use strict";
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -109,6 +130,29 @@ function LoginConfig($stateProvider) {
 }
 
 angular.module('HouseShareFinances').config(LoginConfig);
+'use strict';
+
+function navbar() {
+    return {
+        restrict: 'E',
+        controller: 'NavbarCtrl',
+        controllerAs: 'nCtrl',
+        templateUrl: '../app/components/Navbar/navbar.html'
+    };
+}
+
+angular.module('HouseShareFinances').directive('navbar', navbar);
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var NavbarCtrl = function NavbarCtrl() {
+    _classCallCheck(this, NavbarCtrl);
+
+    var nCtrl = this;
+};
+
+angular.module('HouseShareFinances').controller('NavbarCtrl', NavbarCtrl);
 "use strict";
 "use strict";
 'use strict';
@@ -130,7 +174,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var ToolbarCtrl = function ToolbarCtrl() {
     _classCallCheck(this, ToolbarCtrl);
 
-    var tCtrl = this;
+    var tCtrl = this,
+        date = new Date();
+
+    tCtrl.months = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'];
+
+    tCtrl.currentMonth = tCtrl.months[date.getMonth()];
+
+    console.log(tCtrl.currentMonth);
 };
 
 angular.module('HouseShareFinances').controller('ToolbarCtrl', ToolbarCtrl);
+'use strict';
+
+function bill() {
+    return {
+        restrict: 'E',
+        controller: 'BillCtrl',
+        controllerAs: 'bCtrl',
+        templateUrl: '../app/components/Dashboard/Bill/bill.html'
+    };
+}
+
+angular.module('HouseShareFinances').directive('bill', bill);
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var BillCtrl = function BillCtrl() {
+    _classCallCheck(this, BillCtrl);
+
+    var bCtrl = this;
+    bCtrl.name = '1';
+    bCtrl.percents = 0;
+
+    bCtrl.percentsLeft = 100 - bCtrl.percents;
+};
+
+angular.module('HouseShareFinances').controller('BillCtrl', BillCtrl);

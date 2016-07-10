@@ -1,0 +1,23 @@
+<form class="form-horizontal">
+    <div class="form-group">
+        <label>
+            Rachunek:
+            {{bCtrl.name}}
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>
+            Wydziel:
+
+            <input ng-model="bCtrl.percents" type="range" min="0" max="100">
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>
+            Pozostało:
+            {{bCtrl.percentsLeft}}
+        </label>
+    </div>
+</form>
