@@ -8,5 +8,5 @@ class MainCtrl {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .controller('MainCtrl', MainCtrl);

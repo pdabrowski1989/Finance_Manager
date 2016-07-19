@@ -9,4 +9,4 @@ function CreateHouseConfig($stateProvider) {
     });
 }
 
-angular.module('HouseShareFinances').config(CreateHouseConfig);
+angular.module('FinanceManager').config(CreateHouseConfig);

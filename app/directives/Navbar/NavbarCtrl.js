@@ -7,5 +7,5 @@ class NavbarCtrl {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .controller('NavbarCtrl', NavbarCtrl);

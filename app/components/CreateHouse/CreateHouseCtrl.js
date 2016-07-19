@@ -7,5 +7,5 @@ class CreateHouseCtrl {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .controller('CreateHouseCtrl', CreateHouseCtrl);

@@ -7,5 +7,5 @@ class LogInService {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .service('LogInService', LogInService);

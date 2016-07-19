@@ -7,5 +7,5 @@ class AddBillCtrl {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .controller('AddBillCtrl', AddBillCtrl);

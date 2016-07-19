@@ -10,5 +10,5 @@ function toolbar() {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .directive('toolbar', toolbar);

@@ -10,4 +10,4 @@ function LoginConfig($stateProvider) {
     )
 }
 
-angular.module('HouseShareFinances').config(LoginConfig);
+angular.module('FinanceManager').config(LoginConfig);

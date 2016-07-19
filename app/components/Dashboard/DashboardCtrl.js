@@ -7,5 +7,5 @@ class DashboardCtrl {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .controller('DashboardCtrl', DashboardCtrl);

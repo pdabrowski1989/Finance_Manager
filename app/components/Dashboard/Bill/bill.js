@@ -10,5 +10,5 @@ function bill() {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .directive('bill', bill);

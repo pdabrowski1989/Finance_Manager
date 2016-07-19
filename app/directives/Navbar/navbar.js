@@ -10,5 +10,5 @@ function navbar() {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .directive('navbar', navbar);

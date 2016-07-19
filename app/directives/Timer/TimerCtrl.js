@@ -21,5 +21,5 @@ class TimerCtrl {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .controller('TimerCtrl', TimerCtrl);

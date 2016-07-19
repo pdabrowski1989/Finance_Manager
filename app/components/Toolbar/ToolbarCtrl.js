@@ -27,5 +27,5 @@ class ToolbarCtrl {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .controller('ToolbarCtrl', ToolbarCtrl);

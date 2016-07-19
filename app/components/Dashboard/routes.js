@@ -11,4 +11,4 @@ function DashboardConfig($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/dashboard');
 }
 
-angular.module('HouseShareFinances').config(DashboardConfig);
+angular.module('FinanceManager').config(DashboardConfig);

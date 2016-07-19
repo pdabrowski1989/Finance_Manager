@@ -9,4 +9,4 @@ function AddBillConfig($stateProvider) {
     });
 }
 
-angular.module('HouseShareFinances').config(AddBillConfig);
+angular.module('FinanceManager').config(AddBillConfig);

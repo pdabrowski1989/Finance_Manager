@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('HouseShareFinances', ['ui.router']);
+angular.module('FinanceManager', ['ui.router']);
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12,7 +12,7 @@ var MainCtrl = function MainCtrl() {
     console.log('aaa');
 };
 
-angular.module('HouseShareFinances').controller('MainCtrl', MainCtrl);
+angular.module('FinanceManager').controller('MainCtrl', MainCtrl);
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23,7 +23,7 @@ var AddBillCtrl = function AddBillCtrl() {
     var abCtrl = this;
 };
 
-angular.module('HouseShareFinances').controller('AddBillCtrl', AddBillCtrl);
+angular.module('FinanceManager').controller('AddBillCtrl', AddBillCtrl);
 "use strict";
 'use strict';
 
@@ -36,56 +36,11 @@ function AddBillConfig($stateProvider) {
     });
 }
 
-angular.module('HouseShareFinances').config(AddBillConfig);
-'use strict';
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var CreateHouseCtrl = function CreateHouseCtrl() {
-    _classCallCheck(this, CreateHouseCtrl);
-
-    var chCtrl = this;
-};
-
-angular.module('HouseShareFinances').controller('CreateHouseCtrl', CreateHouseCtrl);
-'use strict';
-
-function CreateHouseConfig($stateProvider) {
-    $stateProvider.state('createhouse', {
-        url: "/createhouse",
-        templateUrl: '../app/components/CreateHouse/createhouse.html',
-        controller: 'CreateHouseCtrl',
-        controllerAs: 'chCtrl'
-    });
-}
-
-angular.module('HouseShareFinances').config(CreateHouseConfig);
-'use strict';
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var DashboardCtrl = function DashboardCtrl() {
-    _classCallCheck(this, DashboardCtrl);
-
-    var dCtrl = this;
-};
-
-angular.module('HouseShareFinances').controller('DashboardCtrl', DashboardCtrl);
+angular.module('FinanceManager').config(AddBillConfig);
+/**
+ * Created by PawelD on 2016-07-06.
+ */
 "use strict";
-'use strict';
-
-function DashboardConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider.state('dashboard', {
-        url: "/dashboard",
-        templateUrl: '../app/components/Dashboard/dashboard.html',
-        controller: 'DashboardCtrl',
-        controllerAs: 'dCtrl'
-    });
-
-    $urlRouterProvider.otherwise('/dashboard');
-}
-
-angular.module('HouseShareFinances').config(DashboardConfig);
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -102,7 +57,7 @@ var LogInCtrl = function LogInCtrl() {
     };
 };
 
-angular.module('HouseShareFinances').controller('LogInCtrl', LogInCtrl);
+angular.module('FinanceManager').controller('LogInCtrl', LogInCtrl);
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -113,7 +68,7 @@ var LogInService = function LogInService($http) {
     $http.get('');
 };
 
-angular.module('HouseShareFinances').service('LogInService', LogInService);
+angular.module('FinanceManager').service('LogInService', LogInService);
 'use strict';
 
 function LoginConfig($stateProvider) {
@@ -125,9 +80,56 @@ function LoginConfig($stateProvider) {
     });
 }
 
-angular.module('HouseShareFinances').config(LoginConfig);
+angular.module('FinanceManager').config(LoginConfig);
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CreateHouseCtrl = function CreateHouseCtrl() {
+    _classCallCheck(this, CreateHouseCtrl);
+
+    var chCtrl = this;
+};
+
+angular.module('FinanceManager').controller('CreateHouseCtrl', CreateHouseCtrl);
+'use strict';
+
+function CreateHouseConfig($stateProvider) {
+    $stateProvider.state('createhouse', {
+        url: "/createhouse",
+        templateUrl: '../app/components/CreateHouse/createhouse.html',
+        controller: 'CreateHouseCtrl',
+        controllerAs: 'chCtrl'
+    });
+}
+
+angular.module('FinanceManager').config(CreateHouseConfig);
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var DashboardCtrl = function DashboardCtrl() {
+    _classCallCheck(this, DashboardCtrl);
+
+    var dCtrl = this;
+};
+
+angular.module('FinanceManager').controller('DashboardCtrl', DashboardCtrl);
 "use strict";
-"use strict";
+'use strict';
+
+function DashboardConfig($stateProvider, $urlRouterProvider) {
+    $stateProvider.state('dashboard', {
+        url: "/dashboard",
+        templateUrl: '../app/components/Dashboard/dashboard.html',
+        controller: 'DashboardCtrl',
+        controllerAs: 'dCtrl'
+    });
+
+    $urlRouterProvider.otherwise('/dashboard');
+}
+
+angular.module('FinanceManager').config(DashboardConfig);
 'use strict';
 
 function toolbar() {
@@ -139,7 +141,7 @@ function toolbar() {
     };
 }
 
-angular.module('HouseShareFinances').directive('toolbar', toolbar);
+angular.module('FinanceManager').directive('toolbar', toolbar);
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -157,7 +159,7 @@ var ToolbarCtrl = function ToolbarCtrl() {
     console.log(tCtrl.currentMonth);
 };
 
-angular.module('HouseShareFinances').controller('ToolbarCtrl', ToolbarCtrl);
+angular.module('FinanceManager').controller('ToolbarCtrl', ToolbarCtrl);
 'use strict';
 
 function navbar() {
@@ -169,7 +171,7 @@ function navbar() {
     };
 }
 
-angular.module('HouseShareFinances').directive('navbar', navbar);
+angular.module('FinanceManager').directive('navbar', navbar);
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -180,7 +182,31 @@ var NavbarCtrl = function NavbarCtrl() {
     var nCtrl = this;
 };
 
-angular.module('HouseShareFinances').controller('NavbarCtrl', NavbarCtrl);
+angular.module('FinanceManager').controller('NavbarCtrl', NavbarCtrl);
+'use strict';
+
+function SignInConfig($stateProvider) {
+    $stateProvider.state('signIn', {
+        url: "/signIn",
+        templateUrl: '../app/components/SignIn/signIn.html',
+        controller: 'SignInCtrl',
+        controllerAs: 'siCtrl'
+    });
+}
+
+angular.module('FinanceManager').config(SignInConfig);
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SignInCtrl = function SignInCtrl() {
+    _classCallCheck(this, SignInCtrl);
+
+    var dCtrl = this;
+};
+
+angular.module('FinanceManager').controller('SignInCtrl', SignInCtrl);
+"use strict";
 'use strict';
 
 function timer() {
@@ -192,7 +218,7 @@ function timer() {
     };
 }
 
-angular.module('HouseShareFinances').directive('timer', timer);
+angular.module('FinanceManager').directive('timer', timer);
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -217,11 +243,7 @@ var TimerCtrl = function TimerCtrl($interval, $scope) {
         }, 500);
 };
 
-angular.module('HouseShareFinances').controller('TimerCtrl', TimerCtrl);
-/**
- * Created by PawelD on 2016-07-06.
- */
-"use strict";
+angular.module('FinanceManager').controller('TimerCtrl', TimerCtrl);
 'use strict';
 
 function bill() {
@@ -233,7 +255,7 @@ function bill() {
     };
 }
 
-angular.module('HouseShareFinances').directive('bill', bill);
+angular.module('FinanceManager').directive('bill', bill);
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -248,4 +270,4 @@ var BillCtrl = function BillCtrl() {
     bCtrl.percentsLeft = 100 - bCtrl.percents;
 };
 
-angular.module('HouseShareFinances').controller('BillCtrl', BillCtrl);
+angular.module('FinanceManager').controller('BillCtrl', BillCtrl);

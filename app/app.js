@@ -1,5 +1,5 @@
 'use strict';
 
-angular.module('HouseShareFinances', [
+angular.module('FinanceManager', [
     'ui.router'
 ]);

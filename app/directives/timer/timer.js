@@ -10,5 +10,5 @@ function timer() {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .directive('timer', timer);

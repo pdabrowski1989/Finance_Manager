@@ -12,5 +12,5 @@ class LogInCtrl {
 }
 
 angular
-    .module('HouseShareFinances')
+    .module('FinanceManager')
     .controller('LogInCtrl',  LogInCtrl);
