@@ -24,4 +24,4 @@ app.use('/style', express.static(projectPath + 'www/style'));
 
 //==========
 app.listen(port);
-console.log('Listening to port ' + port + ' ...');
+console.log('Listening on port: ' + port + ' .');
