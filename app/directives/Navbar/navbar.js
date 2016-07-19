@@ -5,7 +5,7 @@ function navbar() {
         restrict: 'E',
         controller: 'NavbarCtrl',
         controllerAs: 'nCtrl',
-        templateUrl: '../app/components/Navbar/navbar.html'
+        templateUrl: '../app/directives/Navbar/navbar.html'
     }
 }
 

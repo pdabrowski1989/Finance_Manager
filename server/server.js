@@ -1,27 +1,27 @@
+//========== Packages
 var express = require('express');
+var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var path = require("path");
 
+//========== Variables
 var User = require('./models/user');
-
 var app = express();
 var port = 3000;
-var db = 'mongodb://mo1008_dbshare:eGhz7AStiq8ZzZOmTXY6@85.194.242.107:27017/mo1008_dbshare';
+var db = '';
+var projectPath = path.join(__dirname, '../');
 
-mongoose.connect(db, function (err, res) {
-    if (err) {
-        console.log ('ERROR connecting to: ' + db + '. ' + err);
-    } else {
-        console.log ('Succeeded connected to: ' + db);
-    }
+//========== Index View
+app.get('/', function (req, res) {
+    res.sendFile(projectPath + 'www/index.html')
 });
 
-var router = express.Router();
+//========== Static Files
+app.use('/app', express.static(projectPath + 'app'));
+app.use('/libs', express.static(projectPath + 'www/libs'));
+app.use('/js', express.static(projectPath + 'www/js'));
+app.use('/style', express.static(projectPath + 'www/style'));
 
-router.get('/', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });
-});
-
-app.use('/api', router);
-
+//==========
 app.listen(port);
 console.log('Listening to port ' + port + ' ...');

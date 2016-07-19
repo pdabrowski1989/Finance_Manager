@@ -37,10 +37,6 @@ function AddBillConfig($stateProvider) {
 }
 
 angular.module('HouseShareFinances').config(AddBillConfig);
-/**
- * Created by PawelD on 2016-07-06.
- */
-"use strict";
 'use strict';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -130,29 +126,6 @@ function LoginConfig($stateProvider) {
 }
 
 angular.module('HouseShareFinances').config(LoginConfig);
-'use strict';
-
-function navbar() {
-    return {
-        restrict: 'E',
-        controller: 'NavbarCtrl',
-        controllerAs: 'nCtrl',
-        templateUrl: '../app/components/Navbar/navbar.html'
-    };
-}
-
-angular.module('HouseShareFinances').directive('navbar', navbar);
-'use strict';
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var NavbarCtrl = function NavbarCtrl() {
-    _classCallCheck(this, NavbarCtrl);
-
-    var nCtrl = this;
-};
-
-angular.module('HouseShareFinances').controller('NavbarCtrl', NavbarCtrl);
 "use strict";
 "use strict";
 'use strict';
@@ -185,6 +158,70 @@ var ToolbarCtrl = function ToolbarCtrl() {
 };
 
 angular.module('HouseShareFinances').controller('ToolbarCtrl', ToolbarCtrl);
+'use strict';
+
+function navbar() {
+    return {
+        restrict: 'E',
+        controller: 'NavbarCtrl',
+        controllerAs: 'nCtrl',
+        templateUrl: '../app/directives/Navbar/navbar.html'
+    };
+}
+
+angular.module('HouseShareFinances').directive('navbar', navbar);
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var NavbarCtrl = function NavbarCtrl() {
+    _classCallCheck(this, NavbarCtrl);
+
+    var nCtrl = this;
+};
+
+angular.module('HouseShareFinances').controller('NavbarCtrl', NavbarCtrl);
+'use strict';
+
+function timer() {
+    return {
+        restrict: 'E',
+        controller: 'TimerCtrl',
+        controllerAs: 'tCtrl',
+        templateUrl: '../app/directives/Timer/timer.html'
+    };
+}
+
+angular.module('HouseShareFinances').directive('timer', timer);
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var TimerCtrl = function TimerCtrl($interval, $scope) {
+        _classCallCheck(this, TimerCtrl);
+
+        var tCtrl = this;
+        tCtrl.date = new Date();
+
+        /////
+
+        tCtrl.currentYear = tCtrl.date.getYear();
+        tCtrl.currentMonth = tCtrl.date.getMonth();
+        tCtrl.days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        tCtrl.currentDay = tCtrl.days[tCtrl.date.getDay()];
+        tCtrl.currentHour = tCtrl.date.getHours();
+        tCtrl.currentMinute = tCtrl.date.getMinutes();
+
+        tCtrl.currentSecond = $interval(function () {
+                return tCtrl.date.getSeconds();
+        }, 500);
+};
+
+angular.module('HouseShareFinances').controller('TimerCtrl', TimerCtrl);
+/**
+ * Created by PawelD on 2016-07-06.
+ */
+"use strict";
 'use strict';
 
 function bill() {
