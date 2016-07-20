@@ -4,11 +4,12 @@ class SignInService {
     constructor($http, $q) {
         let siService = this;
         siService.createUser = createUser;
+        var user = null;
 
         function createUser(username) {
             let deferred = $q.defer();
 
-            $http.post('/user', {
+            $http.post('/api/user', {
                 name: username
             }).success(function (data, status) {
                 if (status === 200 && data.status) {

@@ -26,6 +26,8 @@ app.get('/', function (req, res) {
 });
 
 //========== Routers
+var User = require(projectPath + 'server/models/user.js');
+
 router.route('/user').post(function (req, res) {
     var user = new User();
     user.name = req.body.name;
