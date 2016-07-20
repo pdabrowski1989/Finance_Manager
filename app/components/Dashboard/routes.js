@@ -8,7 +8,9 @@ function DashboardConfig($stateProvider, $urlRouterProvider) {
         controllerAs: 'dCtrl'
     });
 
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/signIn');
 }
 
-angular.module('FinanceManager').config(DashboardConfig);
+angular
+    .module('FinanceManager')
+    .config(DashboardConfig);

@@ -3,7 +3,6 @@
 class MainCtrl {
     constructor() {
         let mCtrl = this;
-        console.log('aaa')
     }
 }
 

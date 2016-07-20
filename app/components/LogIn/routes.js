@@ -1,8 +1,8 @@
 'use strict';
 
 function LoginConfig($stateProvider) {
-    $stateProvider.state('login', {
-            url: '/login',
+    $stateProvider.state('logIn', {
+            url: '/logIn',
             templateUrl: '../app/components/LogIn/login.html',
             controller: 'LogInCtrl',
             controllerAs: 'lCtrl'
@@ -10,4 +10,6 @@ function LoginConfig($stateProvider) {
     )
 }
 
-angular.module('FinanceManager').config(LoginConfig);
+angular
+    .module('FinanceManager')
+    .config(LoginConfig);

@@ -1,8 +1,11 @@
 'use strict';
 
 class SignInCtrl {
-    constructor() {
-        let dCtrl = this;
+    constructor(SignInService) {
+        let siCtrl = this;
+        siCtrl.username;
+        siCtrl.createUser = SignInService.createUser;
+
     }
 }
 

@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<form>
+    <label>
+        Nick:
+        <input ng-model="siCtrl.username" type="text" class="form-control">
+    </label>
+    <label>
+        Email:
+        <input type="email" class="form-control">
+    </label>
+  <label>
+      Password:
+      <input type="text" class="form-control">
+  </labeL>
+    <label>
+        Retype-password:
+        <input type="text" class="form-control">
+    </label>
 
-</body>
-</html>
+    <button ng-click="siCtrl.createUser(siCtrl.username)">
+        click
+    </button>
+</form>

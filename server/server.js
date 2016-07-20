@@ -7,19 +7,35 @@ var path = require('path');
 //========== Variables
 var app = express();
 var router = express.Router();
-var db = 'mongodb://node:node@novus.modulusmongo.net:27017/Iganiq8o';
+var db = mongoose.connection;
 var port = 3000;
 var projectPath = path.join(__dirname, '../');
 
 //========== Database
+mongoose.connect('mongodb://localhost/testdb');
+db.on('error', function () {
+    console.log('Connection Error.')
+});
+db.once('open', function() {
+   console.log('Connection Success.')
+});
 
 //========== Index View
 app.get('/', function (req, res) {
     res.sendFile(projectPath + 'www/index.html')
 });
 
-//========== Models
-var user = require(projectPath + 'server/models/user');
+//========== Routers
+router.route('/user').post(function (req, res) {
+    var user = new User();
+    user.name = req.body.name;
+
+    user.save(function(err) {
+        if (err)
+            res.send(err);
+        res.json({ message: 'Bear created!' });
+    });
+});
 
 //========== Static Files
 app.use('/app', express.static(projectPath + 'app'));
